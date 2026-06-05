@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — Chilam | zynk.puff</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="smoke-container" id="smokeContainer"></div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/banner.png" alt="Chilam" class="nav-logo-img" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link active">Shop</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" onclick="toggleCart()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button onclick="toggleCart()" class="cart-close">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+      <p>Your cart is empty</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">NPR 0</span>
+    </div>
+    <button class="btn-checkout" onclick="alert('Network Error. Please try again later.')">Checkout</button>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<section class="product-detail-section">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="shop.html">Shop</a>
+      <span>›</span>
+      <span id="breadcrumbName">Product</span>
+    </div>
+    <div class="product-detail" id="productDetail">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="related-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">More Products</span>
+      <h2 class="section-title">You May Also Like</h2>
+    </div>
+    <div class="products-grid" id="relatedGrid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="images/banner.png" alt="Chilam" class="footer-logo" />
+        <p>Premium vaping experiences for the discerning few.</p>
+        <p class="footer-age">⚠️ For adults 18+ only</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <a href="https://instagram.com/zynk.puff" target="_blank" class="social-link">@zynk.puff</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Chilam by zynk.puff — All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
